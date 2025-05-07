@@ -1,1 +1,26 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'bootstrap/scss/bootstrap';
+
+footer {
+    border-top: 1px solid #ddd;
+    padding: 20px 0;
+    background-color: #f8f9fa;
+  }
+  
+  footer h5 {
+    font-weight: bold;
+  }
+  
+  footer a {
+    text-decoration: none;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+
+  .navbar {
+    padding: 20px 40px; /* Grosime (sus și jos) și spațiu de la margine (stânga și dreapta) */
+    font-size: 1.2rem; /* Text puțin mai mare pentru header */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* O umbră discretă */
+  }
+  

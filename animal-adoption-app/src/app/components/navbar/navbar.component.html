@@ -1,0 +1,18 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <!-- Brand + Link-uri pe aceeași linie -->
+    <div class="d-flex align-items-center">
+      <a class="navbar-brand me-3" routerLink="/">Adopție Animale</a>
+      <ul class="navbar-nav d-flex flex-row">
+        <li class="nav-item me-2">
+          <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/admin" routerLinkActive="active">Admin</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
