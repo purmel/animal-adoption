@@ -1,0 +1,102 @@
+<div class="container">
+  <h1 class="my-4">Administrează Animalele</h1>
+
+  <!-- Formular pentru adăugare/editare -->
+  <form #animalForm="ngForm" (ngSubmit)="onSubmit(animalForm)">
+    <!--Eticheta si campul pentru numele animalului-->
+    <div class="form-group mb-3">
+      <label for="name">Nume</label>
+      <input
+        type="text"
+        id="name"
+        class="form-control"
+        name="name"
+        [(ngModel)]="animal.name" 
+        required
+      />
+    </div>
+<!-- Eticheta și câmpul pentru tipul animalului -->
+    <div class="form-group mb-3">
+      <label for="type">Tip</label>
+      <input
+        type="text"
+        id="type"
+        class="form-control"
+        name="type"
+        [(ngModel)]="animal.type"
+        required
+      />
+    </div>
+    <!--Eticheta si campul pentru varsta animalului-->
+    <div class="form-group mb-3">
+      <label for="age">Vârstă</label>
+      <input
+        type="number"
+        id="age"
+        class="form-control"
+        name="age"
+        [(ngModel)]="animal.age"
+        required
+      />
+    </div>
+
+
+    <div class="form-group mb-3">
+      <label for="description">Descriere</label>
+      <textarea
+        id="description"
+        class="form-control"
+        name="description"
+        [(ngModel)]="animal.description"
+        required
+      ></textarea>
+    </div>
+
+     <!--Eticheta si campul pentru URL-ul imaginii-->
+    <div class="form-group mb-3">
+      <label for="imageUrl">URL Imagine</label>
+      <input
+        type="text"
+        id="imageUrl"
+        class="form-control"
+        name="imageUrl"
+        [(ngModel)]="animal.imageUrl"
+        required
+      />
+    </div>
+        <!--Buton pentru trimiterea formularului-->
+    <button type="submit" class="btn btn-primary">
+      {{ isEditing ? 'Actualizează' : 'Adaugă' }} Animalul
+    </button>
+  </form>
+
+  <!-- Listă de animale -->
+  <h2 class="my-4">Lista Animale</h2>
+  <div class="table-responsive">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Nume</th>
+          <th>Tip</th>
+          <th>Vârstă</th>
+          <th>Acțiuni</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let animal of animals" class="ugi">
+          <td>{{ animal.name }}</td>
+          <td>{{ animal.type }}</td>
+          <td>{{ animal.age }}</td>
+          <td>
+            <button class="btn btn-warning btn-sm m-3" (click)="editAnimal(animal)">
+              Editare
+            </button>
+            <button class="btn btn-danger btn-sm" (click)="deleteAnimal(animal.id)">
+              Ștergere
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+.detail-image {
+    max-width: 600px; /* Dimensiune mai mare decât pe home page */
+    width: 100%; /* Păstrează imaginea responsive */
+    height: auto; /* Păstrează proporțiile imaginii */
+    border-radius: 8px; /* Opțional: colțuri rotunjite */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Umbră subtilă pentru aspect plăcut */
+  }
+  
+  h1 {
+    font-size: 2.5rem; /* Dimensiune mai mare pentru titlu */
+    font-weight: bold; /* Text îngroșat */
+    margin-bottom: 20px; /* Spațiu sub titlu */
+  }
+  
+  .details p {
+    font-size: 2rem; /* Dimensiune mai mare pentru text */
+    color: #333; /* O nuanță mai închisă pentru text */
+    margin-bottom: 10px; /* Spațiu între paragrafe */
+  }
+  
+  .details strong {
+    font-size: 2rem; /* Dimensiune mai mare pentru textul bold */
+  }
+  
